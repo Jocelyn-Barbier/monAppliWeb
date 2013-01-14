@@ -1,0 +1,66 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="author" content="SIO2" />
+<meta name="keywords" content="Mon Appli Web" />
+<meta name="description" content="Appli Web pour le TP Git" />
+<meta name="date" content="2012-12-22T08:30:45+01:00" />
+<!-- <link rel="shortcut icon" type="image/x-icon" href="monIcon.ico" /> -->
+<title>Mon application Web</title>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+function verif(entree) {
+var seulement_ceci ="0123456789-+*/.";
+for (var i = 0; i < entree.length; i++)
+if (seulement_ceci.indexOf(entree.charAt(i))<0)
+return false;
+return true;
+}
+function affResult() {
+var x = 0;
+if (verif(window.document.maCalculette.ecran.value))
+x = eval(window.document.maCalculette.ecran.value);
+window.document.maCalculette.ecran.value=x;
+}
+function touche(caracteres) {
+window.document.maCalculette.ecran.value=window.document.maCalculette.ecran.value +
+caracteres;
+}
+-->
+</script>
+<form name="maCalculette" action="" onSubmit="affResult();return false;">
+<div id="contenuPage">
+<table class="calc">
+<tr>
+<td colspan="4" class="ecran">
+<input type="text" name="ecran" class="ecran" />
+</td>
+</tr>
+<tr>
+<td classe="boutons"><input type="button" class="unBouton" value="7" onClick="touche('7')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="8" onClick="touche('8')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="9" onClick="touche('9')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="&divide;" onClick="touche('/')" /></td>
+</tr>
+<tr>
+<td classe="boutons"><input type="button" class="unBouton" value="4" onClick="touche('4')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="5" onClick="touche('5')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="6" onClick="touche('6')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="x" onClick="touche('*')" /></td>
+</tr>
+<tr>
+<td classe="boutons"><input type="button" class="unBouton" value="1" onClick="touche('1')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="2" onClick="touche('2')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="3" onClick="touche('3')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="-" onClick="touche('-')" /></td>
+</tr>
+<tr>
+<td classe="boutons"><input type="button" class="unBouton" value="0" onClick="touche('0')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="." onClick="touche('.')" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="=" onClick="affResult()" /></td>
+<td classe="boutons"><input type="button" class="unBouton" value="+" onClick="touche('+')" /></td>
+</tr>
+</div>
+</form>
+</table>
+</body>
